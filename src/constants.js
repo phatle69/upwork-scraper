@@ -9,5 +9,5 @@ exports.EnumURLTypes = {
 exports.EnumBaseUrl = {
     MAIN_URL: 'https://www.upwork.com',
     PROFILE_SEARCH_URL: 'https://www.upwork.com/search/profiles',
-    JOB_SEARCH_URL: 'https://www.upwork.com/nx/search/jobs',
+    JOB_SEARCH_URL: 'https://www.upwork.com/search/jobs',
 };
