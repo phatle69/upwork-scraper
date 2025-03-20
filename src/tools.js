@@ -41,7 +41,7 @@ exports.getUrlType = (url = '') => {
         type = EnumURLTypes.PROFILE_SEARCH;
     }
 
-    if (url.match(/upwork\.com\/search\/jobs.+/)) {
+    if (url.match(/upwork\.com\/(?:nx\/)?search\/jobs.+/)) {
         type = EnumURLTypes.JOB_SEARCH;
     }
 
