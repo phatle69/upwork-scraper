@@ -1,4 +1,5 @@
 const Apify = require('apify');
+const puppeteer = require('puppeteer');
 const { log, getUrlType, goToNextPage, getSearchUrl, gotoFunction } = require('./tools');
 const { EnumURLTypes } = require('./constants');
 const { profileParser, categoryParser, profileSearchParser } = require('./parsers');
