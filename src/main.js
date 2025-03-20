@@ -2,6 +2,7 @@ const Apify = require('apify');
 const { log, getUrlType, goToNextPage, getSearchUrl, gotoFunction } = require('./tools');
 const { EnumURLTypes } = require('./constants');
 const { profileParser, categoryParser, profileSearchParser } = require('./parsers');
+const { jobSearchParser, jobParser } = require('./parsers');
 
 Apify.main(async () => {
     const input = await Apify.getInput();
