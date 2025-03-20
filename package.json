@@ -7,7 +7,8 @@
   },
   "dependencies": {
     "apify": "^2.2.2",
-    "safe-eval": "^0.4.1"
+    "safe-eval": "^0.4.1",
+    "puppeteer": "^20.8.0"
   },
   "devDependencies": {
     "@apify/eslint-config": "^0.1.0",
