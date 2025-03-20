@@ -37,9 +37,10 @@ Apify.main(async () => {
         useSessionPool: true,
         persistCookiesPerSession: true,
         proxyConfiguration,
-        launchPuppeteerOptions: {
-            stealth: true,
-        },
+        launchOptions: {
+            headless: true,
+            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+            },
 
         gotoFunction,
 
