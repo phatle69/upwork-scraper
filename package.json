@@ -1,25 +1,28 @@
 {
-	"name": "upwork-scraper",
-	"version": "0.0.1",
-	"description": "Apify actor for scraping upwork.com",
-	"dependencies": {
-		"apify": "^2.2.2",
-		"safe-eval": "^0.4.1"
-	},
-	"devDependencies": {
-		"@apify/eslint-config": "^0.1.0",
-		"eslint": "7.2.0"
-	},
-	"scripts": {
-		"start": "node src/main.js",
-		"lint": "./node_modules/.bin/eslint ./src --ext .js,.jsx",
-		"lint:fix": "./node_modules/.bin/eslint ./src --ext .js,.jsx --fix",
-		"test": "echo \"Error: oops, the actor has no tests yet, sad!\" && exit 1"
-	},
-	"author": "Gustavo T. Rudiger",
-	"license": "ISC",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/gustavotr/upwork-scraper.git"
-	}
+  "name": "upwork-scraper",
+  "version": "0.0.1",
+  "description": "Apify actor for scraping upwork.com",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "apify": "^2.2.2",
+    "safe-eval": "^0.4.1"
+  },
+  "devDependencies": {
+    "@apify/eslint-config": "^0.1.0",
+    "eslint": "7.2.0"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "lint": "./node_modules/.bin/eslint ./src --ext .js,.jsx",
+    "lint:fix": "./node_modules/.bin/eslint ./src --ext .js,.jsx --fix",
+    "test": "echo \"Error: oops, the actor has no tests yet, sad!\" && exit 1"
+  },
+  "author": "Gustavo T. Rudiger",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gustavotr/upwork-scraper.git"
+  }
 }
