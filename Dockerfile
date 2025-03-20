@@ -1,22 +1,17 @@
-# Sử dụng image cơ sở của Apify với Node 16
-FROM apify/actor-node-basic:16
+# Sử dụng image cơ sở do Apify cung cấp với tag latest
+FROM apify/actor-node-basic:latest
 
 # Thiết lập thư mục làm việc
 WORKDIR /app
 
-# Copy các file cấu hình package; nếu không có package-lock.json thì nó sẽ bỏ qua
-COPY package.json package-lock.json* ./
+# Copy file package.json vào container
+COPY package.json ./
 
-# Làm sạch cache và cài đặt dependencies cho production
-RUN npm cache clean --force && \
-    if [ -f package-lock.json ]; then \
-      npm ci --only=production --no-optional; \
-    else \
-      npm install --only=production --no-optional; \
-    fi
+# Làm sạch cache và cài đặt các dependencies cần thiết cho production
+RUN npm cache clean --force && npm install --only=production --no-optional
 
 # Copy toàn bộ mã nguồn vào container
 COPY . .
 
-# Thiết lập lệnh khởi chạy actor
+# Lệnh khởi chạy actor
 CMD ["node", "src/main.js"]
