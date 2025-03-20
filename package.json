@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"description": "Apify actor for scraping upwork.com",
 	"dependencies": {
-		"apify": "^0.21.0",
+		"apify": "^2.2.2",
 		"safe-eval": "^0.4.1"
 	},
 	"devDependencies": {
