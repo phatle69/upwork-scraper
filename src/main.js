@@ -64,6 +64,10 @@ Apify.main(async () => {
             switch (type) {
                 case EnumURLTypes.CATEGORY:
                     return categoryParser({ requestQueue, ...context });
+                case EnumURLTypes.JOB_SEARCH:
+                    // Gọi hàm parser riêng cho trang tìm kiếm việc làm
+                    await jobSearchParser({ requestQueue, ...context });
+                    return goToNextPage({ requestQueue, ...context });
                 case EnumURLTypes.PROFILE_SEARCH:
                     await profileSearchParser({ requestQueue, ...context });
                     return goToNextPage({ requestQueue, ...context });
