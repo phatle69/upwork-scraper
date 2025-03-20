@@ -37,10 +37,12 @@ Apify.main(async () => {
         useSessionPool: true,
         persistCookiesPerSession: true,
         proxyConfiguration,
-        launchOptions: {
-            headless: true,
-            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        launchContext: {
+            launchOptions: {
+                headless: true,
+                args: ['--no-sandbox', '--disable-setuid-sandbox'],
             },
+        },
 
         gotoFunction,
 
