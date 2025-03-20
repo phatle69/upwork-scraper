@@ -1,8 +1,5 @@
-# Sử dụng image Node 16 Alpine – đảm bảo phiên bản Node >=16
-FROM node:16-alpine
-
-# Cài đặt các công cụ build cần thiết: python3, make, g++
-RUN apk add --no-cache python3 make g++
+# Sử dụng image cơ sở của Apify chuyên dụng cho Puppeteer
+FROM apify/actor-node-puppeteer-chrome:latest
 
 # Thiết lập thư mục làm việc
 WORKDIR /app
@@ -10,7 +7,7 @@ WORKDIR /app
 # Copy file package.json vào container
 COPY package.json ./
 
-# Làm sạch cache và cài đặt dependencies cho production
+# Làm sạch cache và cài đặt các dependency cần thiết cho production
 RUN npm cache clean --force && npm install --only=production --no-optional
 
 # Copy toàn bộ mã nguồn dự án vào container
