@@ -9,7 +9,7 @@
         "type": "array",
         "description": "URLs to start with.",
         "editor": "stringList",
-        "patternValue": "^$|https:\\/\\/www\\.upwork\\.com\\/(search|hire|o/profiles/users)\\/\\.*",
+        "patternValue": "^$|^https:\\/\\/www\\.upwork\\.com\\/(?:nx\\/)?(?:search|hire|o\\/profiles\\/users)\\/.*$",
         "prefill": ["https://www.upwork.com/search/profiles/"],
         "default": ["https://www.upwork.com/search/profiles/"]
       },
